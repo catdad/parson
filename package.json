@@ -15,5 +15,12 @@
     "url": "https://github.com/catdad/parson/issues"
   },
   "homepage": "https://github.com/catdad/parson#readme",
-  "description": ""
+  "description": "CLI to parse JSON from stdin",
+  "keywords": [
+    "parse",
+    "json",
+    "stdin",
+    "cli",
+    "util"
+  ]
 }
