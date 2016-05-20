@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /* jshint node: true */
 
+function arrIncludes(arr, val) {
+    return arr.indexOf(val) > -1;
+}
+
 function onError(err, extraData) {
     console.error('ERROR:', err.message);
     
@@ -9,6 +13,12 @@ function onError(err, extraData) {
     }
     
     process.exit(1);
+}
+
+if (arrIncludes(process.argv, '-v') || arrIncludes(process.argv, '--version')) {
+    var pkg = require('./package.json');
+    console.log('v%s', pkg.version);
+    process.exit(0);
 }
 
 var data = [];
